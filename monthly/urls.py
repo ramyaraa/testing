@@ -8,7 +8,5 @@ from . import views
 urlpatterns = [
     # this path contain tow argumets , mean if a request reach january  excute index function
     # 1. describe url we wanna support   2. the function we wanna call
-    path("january", views.january),
-    path("february", views.february),
     path("<month>", views.monthly_challenge)
 ]
