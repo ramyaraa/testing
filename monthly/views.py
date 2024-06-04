@@ -1,13 +1,12 @@
 from django.shortcuts import render
+# i add a not response if not moth
 from django.http import HttpResponse, HttpResponseNotFound
 
 # Create your views here.
 
-# import the HttpRequest, create a def and return the request
 
-
-def january(request):
-    return HttpResponse('thsi moth is january')
+def monthly_challenge_by_number(request, month):
+    return HttpResponse(month)
 
 
 def monthly_challenge(request, month):

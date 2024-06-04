@@ -4,9 +4,8 @@ from django.urls import path
 # import views becaus we wanna work with the index function ,,,, (from .)  it meanse same folder tha urls.py had it
 from . import views
 
-# create a list that contain paths
+# the int ane str before month it fillter it if you type number first function will excute if string second function will excute
 urlpatterns = [
-    # this path contain tow argumets , mean if a request reach january  excute index function
-    # 1. describe url we wanna support   2. the function we wanna call
-    path("<month>", views.monthly_challenge)
+    path("<int:month>", views.monthly_challenge_by_number),
+    path("<str:month>", views.monthly_challenge)
 ]
